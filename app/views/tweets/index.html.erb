@@ -2,10 +2,6 @@
 
 <%= link_to "Tweet", new_tweet_path, id: "new_link", remote: true %>
 
-<ul>
-  <% @tweets.each do |t| %>
-  <li>
-    <%= t.comment %>
-  </li>
-  <% end %>
+<ul id="tweets-list">
+  <%= render @tweets %>
 </ul>

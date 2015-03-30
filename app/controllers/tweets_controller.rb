@@ -5,11 +5,11 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = Tweet.new(params[:tweet])
+    @tweet = Tweet.new
   end
 
   def create
-    @tweet = Tweet.create!(params[:tweet])
+    @tweet = Tweet.new(tweet_params)
     @tweet.save
     flash[:notice] = "Tweet Successfully Created"
     respond_to do |format|

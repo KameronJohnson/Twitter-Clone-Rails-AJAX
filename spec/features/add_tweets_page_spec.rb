@@ -6,6 +6,7 @@ describe "the add tweets process" do
     visit tweets_path
     click_on "Tweet"
     fill_in "Comment", :with => "this is a tweet"
+    click_on 'Tweet'
     expect(page).to have_content "Successfully"
   end
 
